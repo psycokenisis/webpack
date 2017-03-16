@@ -34,8 +34,10 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js App'{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
     }{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-  {{#store}}},{{/store}}
-  {{#store}}  
+  {{#store}}
+  }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
+  {{/store}}
+  {{#store}}
   computed: {
     ...mapGetters([
       'greeting'{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
